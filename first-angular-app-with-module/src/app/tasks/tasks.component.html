@@ -1,0 +1,18 @@
+<section id="tasks hidden_scroll" class="hidden_scroll">
+  <header>
+    <h2>{{ name }}'s Tasks</h2>
+    <menu>
+      <button (click)="OnOpenDialog(true)">Add Task</button>
+    </menu>
+  </header>
+
+  @if(isAddingTask){
+  <app-new-task (close)="OnOpenDialog($event)" [userId]="userId" />
+  }
+
+  <ul>
+    @for(task of selectedUserTasks; track task.id){
+    <li><app-task (complete)="OnCompleteTask($event)" [task]="task" /></li>
+    }
+  </ul>
+</section>
