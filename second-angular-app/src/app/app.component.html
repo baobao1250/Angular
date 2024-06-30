@@ -1,0 +1,13 @@
+<app-header />
+<app-user-input (calculate)="onShowCalculate($event)" />
+
+@for (item of dataShow; track $index) {
+<div>
+  <h2>annualInvestment #{{ item.annualInvestment }}</h2>
+  <p>interest: {{ item.interest }}</p>
+  <p>totalAmountInvested: {{ item.totalAmountInvested }}</p>
+  <p>totalInterest: {{ item.totalInterest }}</p>
+  <p>valueEndOfYear: {{ item.valueEndOfYear }}</p>
+  <p>year: {{ item.year }}</p>
+</div>
+}
