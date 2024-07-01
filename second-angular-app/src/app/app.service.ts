@@ -6,6 +6,7 @@ import { type UserInput } from './user-input/user-input.model';
 })
 export class AppService {
   constructor() {}
+
   calculateInvestmentResults(data: UserInput) {
     const { initialInvestment, annualInvestment, expectedReturn, duration } =
       data;
